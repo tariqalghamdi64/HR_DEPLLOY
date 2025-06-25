@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 # -------------------- Data Loading & Preprocessing --------------------
 @st.cache_resource
 def load_and_train():
-    df = pd.read_csv(r"C:\\Users\\tariq\\OneDrive\\Desktop\\Summer_Projects\\Human_Resources_Department_Solution\\Human_Resources.csv")
+    df = pd.read_csv("Human_Resources.csv")
     df['Attrition'] = df['Attrition'].apply(lambda x: 1 if x == 'Yes' else 0)
     df['OverTime'] = df['OverTime'].apply(lambda x: 1 if x == 'Yes' else 0)
     # Categorical and numerical features
